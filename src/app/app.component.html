@@ -1,3 +1,27 @@
-<h1>
-  {{title}}
-</h1>
+  <div class="row topBlock">
+    <h1 class="nashvilleWeather">
+      {{title}}
+    </h1>
+    <div class="tippy"> 
+    {{today | date}}
+    </div>
+  </div>
+  <div class="currentBlock tippy">
+    <app-current-conditions></app-current-conditions>
+  </div>
+<div class="row">
+  <app-radar id="radar"class="col-sm-5 radarBody"></app-radar>
+  <ngb-tabset id="tabz"class="col-sm-6 bodyBlock">
+    <ngb-tab title="Hourly Forecast">
+      <ng-template ngbTabContent>
+        <app-hourly id="hour"></app-hourly>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Ten Day Forecast">
+      <ng-template ngbTabContent>
+         <app-ten-day></app-ten-day>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+

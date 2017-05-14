@@ -1,0 +1,12 @@
+<div class="tenDayBox">
+  <div class=" halfDay" *ngFor="let day of tenDayForecast">
+  <ul style="list-style:none">
+    <li>{{day.date.weekday}}, {{day.date.monthname}} {{day.date.day}}, {{day.date.year}}</li>
+    <li><img src="{{day.icon_url}}"></li>
+    <li>{{day.conditions}}</li>
+    <li>High: {{day.high.fahrenheit}}&#8457;</li>
+    <li>Low: {{day.low.fahrenheit}}&#8457;</li>
+    <li>Avg Wind: {{day.avewind.mph}}mph {{day.avewind.dir}}</li>
+  </ul>
+</div>
+</div>

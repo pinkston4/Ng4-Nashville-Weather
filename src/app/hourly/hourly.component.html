@@ -1,0 +1,13 @@
+
+<div class="hourBody">
+  <ul class="hourBlock" *ngFor="let hourly of nextTwelveHours">
+    <li class="eachHour"style="list-style: none">
+      <div>{{hourly.FCTTIME.civil}}</div>
+      <div><img src="{{hourly.icon_url}}" alt=""></div>
+      <p>{{hourly.condition}}</p>
+      <div>{{hourly.temp.english}}&#8457;</div> 
+      <div>Wind: {{hourly.wspd.english}}mph {{hourly.wdir.dir}}</div>
+    </li>
+  </ul>
+</div>
+

@@ -1,0 +1,15 @@
+.halfDay {
+    display: inline-block;
+    height: 10rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: .75rem;
+    width: 20%;
+}
+
+.tenDayBox {
+    height: 30rem;
+    overflow-x: scroll;
+    padding-right: 5px;
+}
