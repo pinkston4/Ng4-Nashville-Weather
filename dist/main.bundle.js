@@ -32,7 +32,7 @@ var HourlyService = (function () {
         this.http = http;
     }
     HourlyService.prototype.getHourlyForecast = function () {
-        return this.http.get('http://api.wunderground.com/api/f256fc14aee7a6e1/hourly/q/TN/Nashville.json')
+        return this.http.get('https://api.wunderground.com/api/f256fc14aee7a6e1/hourly/q/TN/Nashville.json')
             .map(this.extractData)
             .catch(this.handleError);
     };
@@ -98,7 +98,7 @@ var TenDayService = (function () {
         this.key = 'f256fc14aee7a6e1';
     }
     TenDayService.prototype.getTenDayForecast = function () {
-        return this.http.get("http://api.wunderground.com/api/" + this.key + "/forecast10day/q/TN/Nashville.json")
+        return this.http.get("https://api.wunderground.com/api/" + this.key + "/forecast10day/q/TN/Nashville.json")
             .map(this.extractData)
             .catch(this.handleError);
     };
@@ -388,8 +388,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var RadarComponent = (function () {
     function RadarComponent() {
         this.key = 'f256fc14aee7a6e1';
-        this.radarImg = "http://api.wunderground.com/api/" + this.key + "/animatedradar/q/TN/Nashville.gif?newmaps=1&timelabel=1&timelabel.y=10&num=5&delay=50";
-        this.satelliteImg = "http://api.wunderground.com/api/" + this.key + "/animatedsatellite/q/TN/Nashville.gif?basemap=1&timelabel=1&timelabel.y=10&num=5&delay=50\n";
+        this.radarImg = "https://api.wunderground.com/api/" + this.key + "/animatedradar/q/TN/Nashville.gif?newmaps=1&timelabel=1&timelabel.y=10&num=5&delay=50";
+        this.satelliteImg = "https://api.wunderground.com/api/" + this.key + "/animatedsatellite/q/TN/Nashville.gif?basemap=1&timelabel=1&timelabel.y=10&num=5&delay=50\n";
     }
     return RadarComponent;
 }());
@@ -637,7 +637,7 @@ var CurrentConditionsService = (function () {
         this.key = 'f256fc14aee7a6e1';
     }
     CurrentConditionsService.prototype.getCurrentConditions = function () {
-        return this.http.get("http://api.wunderground.com/api/" + this.key + "/conditions/q/TN/Nashville.json")
+        return this.http.get("https://api.wunderground.com/api/" + this.key + "/conditions/q/TN/Nashville.json")
             .map(this.extractData)
             .catch(this.handleError);
     };

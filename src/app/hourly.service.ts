@@ -11,7 +11,7 @@ export class HourlyService {
   constructor(private http: Http) { }
 
   getHourlyForecast(): Observable<any> {
-    return this.http.get('http://api.wunderground.com/api/f256fc14aee7a6e1/hourly/q/TN/Nashville.json')
+    return this.http.get('https://api.wunderground.com/api/f256fc14aee7a6e1/hourly/q/TN/Nashville.json')
       .map(this.extractData)
       .catch(this.handleError);
   }

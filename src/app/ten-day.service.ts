@@ -12,7 +12,7 @@ export class TenDayService {
   constructor(private http: Http) { }
 
   getTenDayForecast(): Observable <any> {
-    return this.http.get(`http://api.wunderground.com/api/${this.key}/forecast10day/q/TN/Nashville.json`)
+    return this.http.get(`https://api.wunderground.com/api/${this.key}/forecast10day/q/TN/Nashville.json`)
     .map(this.extractData)
     .catch(this.handleError);
   }

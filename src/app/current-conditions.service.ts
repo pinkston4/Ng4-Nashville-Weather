@@ -12,7 +12,7 @@ export class CurrentConditionsService {
   constructor(private http: Http) { }
 
   getCurrentConditions(): Observable <any> {
-    return this.http.get(`http://api.wunderground.com/api/${this.key}/conditions/q/TN/Nashville.json`)
+    return this.http.get(`https://api.wunderground.com/api/${this.key}/conditions/q/TN/Nashville.json`)
       .map(this.extractData)
       .catch(this.handleError);
   }
